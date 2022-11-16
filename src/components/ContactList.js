@@ -4,6 +4,8 @@ import ContactCard from './ContactCard';
 const ContactList = (props) => {
    console.log(props);
 
+   const deleteContactHandler 
+
    const renderContactList = props.contacts.map((contact)=> {
        return  <ContactCard contact={contact} /> ;
        
