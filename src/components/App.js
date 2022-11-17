@@ -25,9 +25,9 @@ function App() {
   }
 
     useEffect (() => {
-      const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-      if (retriveContacts) {
-        setContacts(retriveContacts);
+      const retrieveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+      if (retrieveContacts) {
+        setContacts(retrieveContacts);
       } 
     }, []);
 
@@ -39,10 +39,27 @@ function App() {
     <div className='ui container'>
       <Router>
           <Header />
-          <Switch>
-              <Route path="/add" component ={AddContact} />
-              <Route path="/" exact component ={ContactList} />
-          </Switch>
+            <Switch>      
+              <Route 
+                 exact 
+                 path="/" 
+                 render={(props) => (
+                   <ContactList 
+                      {...props} 
+                      contacts={contacts} 
+                      getContactId={ removeContactHandler }
+                   />
+                 )} 
+              />   
+
+              <Route 
+                 path="/add" 
+                 render={(props) => (
+                   <AddContact {...props} addContactHandler={addContactHandler}/>
+                 )}
+              />
+              
+            </Switch>  
           
           {/* <AddContact addContactHandler={addContactHandler}/>
           <ContactList contacts={contacts} getContactId={ removeContactHandler }/> */}
