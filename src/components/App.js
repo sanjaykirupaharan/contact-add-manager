@@ -39,6 +39,7 @@ function App() {
     <div className='ui container'>
       <Router>
           <Header />
+          <Router>
             <Switch>      
               <Route 
                  exact 
@@ -60,7 +61,7 @@ function App() {
               />
               
             </Switch>  
-          
+          </Router> 
           {/* <AddContact addContactHandler={addContactHandler}/>
           <ContactList contacts={contacts} getContactId={ removeContactHandler }/> */}
       </Router>
