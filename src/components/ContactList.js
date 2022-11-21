@@ -33,7 +33,7 @@ const ContactList = (props) => {
         <br />
       <h2>
         Contact List   
-        <Link to="/add">
+        <Link to={"/add"}>
           <button className='ui button blue right floated onItemClick'> Add Contact</button>
         </Link> 
                 
