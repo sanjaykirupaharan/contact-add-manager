@@ -1,1 +1,1 @@
-Have not finished data retrieving feature from local storage.
+Routing is still a problem
