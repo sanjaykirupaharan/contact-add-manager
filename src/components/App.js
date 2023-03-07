@@ -54,7 +54,7 @@ function App() {
           />
 
           <Route
-           exact
+            exact
             path={'/add'}
             render={(props) => (
               <AddContact {...props} addContactHandler={addContactHandler} />
