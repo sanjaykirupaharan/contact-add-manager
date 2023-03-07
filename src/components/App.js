@@ -38,7 +38,6 @@ function App() {
   return (
     <div className='ui container'>
       <Router>
-
         <Header />
         <Switch>
           <Route
